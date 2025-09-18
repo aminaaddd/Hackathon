@@ -2,11 +2,11 @@ import streamlit as st
 import pandas as pd
 from pathlib import Path
 
-from Prediction_model.services.data_service import load_dataset
-from Prediction_model.services.model_service import (
+from Injuries_prediction_model.services.data_service import load_dataset
+from Injuries_prediction_model.services.model_service import (
     load_or_train_model, prepare_single_row_features, predict_row
 )
-from Prediction_model.helpers import (
+from Injuries_prediction_model.helpers import (
     get_player_names, fuzzy_suggest, lookup_player_row,
     find_name_column, build_template_row
 )
@@ -15,7 +15,7 @@ st.set_page_config(page_title="Injury Risk Chatbot", layout="wide")
 st.title("Injury Risk Chatbot")
 
 ROOT = Path(__file__).parent.parent
-PKG_DIR = ROOT / "Prediction_model"
+PKG_DIR = ROOT / "Injuries_prediction_model"
 DATA_PATH = PKG_DIR / "player_injuries_impact.csv"
 MODEL_DIR = PKG_DIR / "model"
 MODEL_DIR.mkdir(parents=True, exist_ok=True)
@@ -24,7 +24,7 @@ MODEL_DIR.mkdir(parents=True, exist_ok=True)
 with st.sidebar:
     st.header("Data source")
     uploaded_csv = st.file_uploader("Upload a CSV (optional)", type=["csv"])
-    st.caption("If not provided, I use Prediction_model/player_injuries_impact.csv")
+    st.caption("If not provided, I use Injuries_prediction_model/player_injuries_impact.csv")
 
 # ---------- Data / Model ----------
 raw_df = load_dataset(uploaded_csv, DATA_PATH)
