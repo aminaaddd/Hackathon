@@ -20,7 +20,7 @@ DATA_PATH = PKG_DIR / "player_injuries_impact.csv"
 MODEL_DIR = PKG_DIR / "model"
 MODEL_DIR.mkdir(parents=True, exist_ok=True)
 
-# ---- Sidebar: data source & quick picker ----
+
 with st.sidebar:
     st.header("Data source")
     uploaded_csv = st.file_uploader("Upload a CSV (optional)", type=["csv"])
