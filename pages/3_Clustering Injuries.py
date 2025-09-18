@@ -3,13 +3,18 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 import numpy as np
+from pathlib import Path
 
 from clustering_injury.cluster_core import (
     find_dataset, light_clean, encode_and_scale,
     kmeans_sweep, best_k, pca2
 )
 
-def render(dataset_path: str = "Hackathon\Injuries_prediction_model\player_injuries_impact.csv"):
+def render(dataset_path: Path | None = None):
+    if dataset_path is None:
+        dataset_path = Path("Injuries_prediction_model/player_injuries_impact.csv")
+    df = pd.read_csv(dataset_path)
+
     st.title("Clustering Notebook")
     st.caption("Auto-loads your local CSV. Computes under the hood and shows only the charts.")
 
