@@ -17,6 +17,9 @@ poetry run streamlit run Home.py
 ```
 Then open the URL shown in your terminal
 
+## Live Demo
+[Click here to try the app](https://hackathon-2025.streamlit.app/)
+
 
 
 
