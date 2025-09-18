@@ -10,8 +10,8 @@ from sklearn.metrics import silhouette_score
 from sklearn.preprocessing import StandardScaler
 
 DEFAULT_CANDIDATES = [
-    "prediction_model/player_injuries_impact.csv",
-    "./prediction_model/player_injuries_impact.csv",
+    "injuries_prediction_model/player_injuries_impact.csv",
+    "./injuries_prediction_model/player_injuries_impact.csv",
     "./data/player_injuries_impact.csv",
     "./dataset.csv",
     "./data/dataset.csv",
