@@ -1,0 +1,23 @@
+[project]
+name = "hackathon"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "aminaaddd",email = "amina.addi@yahoo.com"}
+]
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pandas (>=2.3.2,<3.0.0)",
+    "matplotlib (>=3.10.6,<4.0.0)",
+    "streamlit (>=1.49.1,<2.0.0)",
+    "numpy (==1.26.4)",
+    "joblib (>=1.5.2,<2.0.0)",
+    "pathlib (>=1.0.1,<2.0.0)",
+    "scikit-learn (>=1.7.2,<2.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
