@@ -9,7 +9,7 @@ from clustering_injury.cluster_core import (
     kmeans_sweep, best_k, pca2
 )
 
-def render(dataset_path: str = "Injuries_prediction_model\player_injuries_impact.csv"):
+def render(dataset_path: str = "Hackathon\Injuries_prediction_model\player_injuries_impact.csv"):
     st.title("Clustering Notebook")
     st.caption("Auto-loads your local CSV. Computes under the hood and shows only the charts.")
 
