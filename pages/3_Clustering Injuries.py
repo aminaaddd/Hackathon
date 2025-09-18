@@ -27,7 +27,7 @@ def render(dataset_path: str = "injuries_prediction_model/player_injuries_impact
 
     path = find_dataset(dataset_path)
     if path is None:
-        st.error("Dataset not found. Place your CSV at 'prediction_model/player_injuries_impact.csv' (or set DATASET_PATH env var).")
+        st.error("Dataset not found. Place your CSV at 'injuries_prediction_model/player_injuries_impact.csv' (or set DATASET_PATH env var).")
         st.stop()
 
     df_raw = pd.read_csv(path)
